@@ -8,9 +8,58 @@
 *{box-sizing:border-box}
 body{margin:0;min-height:100vh;font-family:Arial,Helvetica,sans-serif;background:#071426;color:#fff;padding:20px}
 .plan{max-width:980px;margin:auto;position:relative;overflow:hidden;border:2px solid #2d8cff;border-radius:20px;background:#0b1d33;padding:28px;box-shadow:0 20px 70px rgba(0,0,0,.42)}
-.plan:before{content:"Schuppen Sued";position:absolute;left:50%;top:52%;transform:translate(-50%,-50%) rotate(-18deg);font-family:cursive;font-size:110px;font-weight:800;color:rgba(95,175,255,.055);white-space:nowrap;pointer-events:none}
+
 h1,.sub,table,.actions{position:relative}
-h1{margin:0;text-align:center;font-size:clamp(32px,6vw,62px)}
+
+
+
+/* DART_V099ZW3_FOOD_PREVIEW_SAME_AS_GITHUB_LOGO */
+.brand-logo{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:min(620px,94%);
+  margin:0 auto 4px;
+  padding:4px 12px 0;
+  line-height:1;
+  text-align:center;
+}
+.brand-logo-word{
+  display:block;
+  color:#ffffff;
+  font-family:"Segoe Script","Brush Script MT","Lucida Handwriting",cursive;
+  font-size:clamp(50px,8vw,92px);
+  font-weight:800;
+  font-style:italic;
+  letter-spacing:-0.055em;
+  transform:rotate(-2deg);
+  text-shadow:
+    0 3px 0 rgba(0,0,0,.38),
+    0 8px 24px rgba(0,0,0,.58),
+    0 0 22px rgba(45,140,255,.22);
+}
+.brand-logo-word .brand-sued{
+  color:#67b4ff;
+  margin-left:.13em;
+}
+.brand-logo-swoosh{
+  display:block;
+  width:76%;
+  height:6px;
+  margin:-2px 0 5px 12%;
+  border-radius:999px;
+  background:linear-gradient(
+    90deg,
+    rgba(45,140,255,0),
+    rgba(103,180,255,.95) 18%,
+    rgba(255,255,255,.92) 58%,
+    rgba(45,140,255,.05)
+  );
+  transform:rotate(-3deg) skewX(-22deg);
+  box-shadow:0 0 14px rgba(45,140,255,.28);
+}
 .sub{text-align:center;color:#bfe0ff;font-size:clamp(18px,3vw,28px);margin:8px 0 22px}
 table{width:100%;border-collapse:collapse;font-size:clamp(16px,2.2vw,24px)}
 th,td{border-bottom:1px solid rgba(95,165,230,.28);padding:13px 10px;text-align:left;vertical-align:top}
@@ -24,15 +73,24 @@ button{border:1px solid #4ba0f5;border-radius:10px;background:#1767aa;color:#fff
 @media print{
  body{background:#fff;color:#000;padding:0}
  .plan{border:0;box-shadow:none;background:#fff;color:#000}
- .plan:before{color:rgba(0,0,0,.04)}
+ 
  .actions{display:none}
  th{color:#333}
+}
+
+@media print{
+  .brand-logo-word{color:#111!important;text-shadow:none!important}
+  .brand-logo-word .brand-sued{color:#246aa7!important}
+  .brand-logo-swoosh{box-shadow:none!important}
 }
 </style>
 </head>
 <body>
 <main class="plan">
-<h1>Schuppen Sued</h1>
+<div class="brand-logo" role="img" aria-label="Schuppen S&#252;d">
+  <div class="brand-logo-word">Schuppen <span class="brand-sued">S&#252;d</span></div>
+  <span class="brand-logo-swoosh"></span>
+</div>
 <div class="sub">Essensplan August 2026</div>
 <table>
 <thead><tr><th>Tag / Datum</th><th>Menue</th><th class="price">Preis</th></tr></thead>
