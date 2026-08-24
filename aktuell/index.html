@@ -3,40 +3,45 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Essensplan - September 2026</title>
+<title>Essensplan - August 2026</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#06111f;color:#eef7ff;font-family:Arial,Helvetica,sans-serif}
-.wrap{max-width:1050px;margin:24px auto;padding:0 16px}
-.head{background:#0a1b30;border:1px solid #2b6797;border-radius:14px;padding:24px;text-align:center;margin-bottom:16px}
-.logo{font-size:54px;font-weight:950;letter-spacing:-2px} .logo em{font-style:normal;color:#35a5ee}
-.month{margin-top:8px;color:#cfeeff;font-size:28px;font-weight:900}
-.card{background:#0a1b30;border:1px solid #244f7e;border-radius:14px;padding:18px;margin-bottom:16px}
-table{width:100%;border-collapse:collapse} th,td{padding:14px 12px;border-bottom:1px solid #244f7e;text-align:left;vertical-align:top}
-th{background:#0e2743;color:#cde7fb} th:first-child,td:first-child{width:18%} th:nth-child(2),td:nth-child(2){width:68%}
-th:last-child,td:last-child{width:14%;text-align:right;white-space:nowrap}
-.desc{color:#aac0d3;font-size:.9em;margin-top:4px} .notice{font-size:20px;line-height:1.55}
-.notice h2{margin-top:0} .empty{text-align:center;color:#9fb5c9}
-.print{display:flex;justify-content:flex-end;margin-bottom:12px} button{background:#1379c9;color:#fff;border:1px solid #39a3ef;border-radius:8px;padding:9px 14px;font-weight:800}
-@media print{.print{display:none}body{background:#fff;color:#000}.head,.card{background:#fff;border-color:#888}th{background:#eee;color:#000}.desc{color:#444}}
+body{margin:0;background:#06111f;color:#f7fbff;font-family:Arial,Helvetica,sans-serif}
+.wrap{max-width:1180px;margin:20px auto;padding:0 16px}
+.sheet{background:#0a1f35;border:2px solid #2a94ef;border-radius:24px;padding:26px 30px 24px;box-shadow:0 16px 48px rgba(0,0,0,.24)}
+.logo{position:relative;width:max-content;max-width:94%;margin:0 auto 20px;padding:0 14px 12px;font-family:"Brush Script MT","Segoe Script","Lucida Handwriting",cursive;font-size:clamp(58px,8vw,106px);font-weight:800;line-height:.92;letter-spacing:-3px;color:#fff;text-shadow:0 4px 7px rgba(0,0,0,.48);white-space:nowrap}
+.logo em{font-style:normal;color:#62b5ff}
+.logo:after{content:"";position:absolute;left:22%;right:4%;bottom:0;height:6px;border-radius:99px;background:linear-gradient(90deg,rgba(64,166,255,.08),#6ebcff 30%,#e7f5ff 62%,rgba(64,166,255,0));transform:skewX(-24deg) rotate(-2deg);box-shadow:0 4px 12px rgba(61,153,229,.42)}
+.month{text-align:center;color:#d6ecff;font-size:clamp(24px,3vw,34px);font-weight:400;margin:0 0 26px}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+th,td{padding:15px 12px;border-bottom:1px solid rgba(83,149,204,.43);text-align:left;vertical-align:top}
+th{color:#71baff;font-size:clamp(18px,2.2vw,29px);font-weight:900}
+th:first-child,td:first-child{width:18%}th:nth-child(2),td:nth-child(2){width:69%}th:last-child,td:last-child{width:13%;text-align:right;white-space:nowrap}
+td{font-size:clamp(18px,2.1vw,27px);line-height:1.25}.weekday{font-weight:900}.date{font-weight:400;margin-top:1px}
+.menu-name{font-weight:500}.desc{font-weight:400}.desc:before{content:" - "}.price{font-weight:900}
+.notice{margin-top:20px;padding:18px 12px 4px;border-top:1px solid rgba(83,149,204,.48);font-size:20px;line-height:1.55;text-align:center}.notice h2{margin:0 0 10px;color:#71baff}
+.empty{text-align:center;color:#9fb5c9;padding:26px}.print{display:flex;justify-content:center;margin-top:26px}
+button{background:#176eb5;color:#fff;border:1px solid #49a8f3;border-radius:11px;padding:12px 20px;font-size:18px;font-weight:900;cursor:pointer}
+@media(max-width:700px){.wrap{padding:0 8px;margin:8px auto}.sheet{padding:18px 12px;border-radius:17px}th,td{padding:11px 7px}th:first-child,td:first-child{width:28%}th:nth-child(2),td:nth-child(2){width:54%}th:last-child,td:last-child{width:18%}.logo{letter-spacing:-2px}}
+@media print{body{background:#fff;color:#000}.wrap{max-width:none;margin:0;padding:0}.sheet{background:#fff;border-color:#666;box-shadow:none}.logo{color:#111;text-shadow:none}.logo em{color:#2685c7}.month,th,.notice h2{color:#234d70}.print{display:none}th,td{border-color:#aaa}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<div class="print"><button onclick="window.print()">Drucken / als PDF speichern</button></div>
-<header class="head"><div class="logo">Schuppen <em>Süd</em></div><div class="month">Essensplan September 2026</div></header>
-<section class="card">
-<table><thead><tr><th>Datum</th><th>Menü</th><th>Preis</th></tr></thead><tbody><tr><td><b>Mittwoch</b><br>02.09.2026</td><td><b>Gemüseauflauf mit Fleischbällchen</b></td><td>7,00 €</td></tr>
-<tr><td><b>Donnerstag</b><br>03.09.2026</td><td><b>Hackbraten mit Speckbohnen und Kartoffeln</b></td><td>8,00 €</td></tr>
-<tr><td><b>Mittwoch</b><br>09.09.2026</td><td><b>Würstchen-Gulasch mit Nudeln</b></td><td>7,00 €</td></tr>
-<tr><td><b>Donnerstag</b><br>10.09.2026</td><td><b>Hühnerfrikassee mit Reis</b></td><td>7,00 €</td></tr>
-<tr><td><b>Mittwoch</b><br>16.09.2026</td><td><b>Gemüseeintopf mit Würstchen</b></td><td>6,50 €</td></tr>
-<tr><td><b>Donnerstag</b><br>17.09.2026</td><td><b>Zigeunerschnitzel mit Pommes</b></td><td>14,00 €</td></tr>
-<tr><td><b>Mittwoch</b><br>23.09.2026</td><td><b>Gyros-Auflauf mit Hollandaise</b></td><td>8,00 €</td></tr>
-<tr><td><b>Donnerstag</b><br>24.09.2026</td><td><b>Hackbraten mit Speckbohnen und Kartoffeln</b></td><td>8,00 €</td></tr>
-<tr><td><b>Mittwoch</b><br>30.09.2026</td><td><b>Pizza vom Blech</b></td><td>-</td></tr></tbody></table>
+<section class="sheet">
+  <div class="logo">Schuppen <em>Süd</em></div>
+  <div class="month">Essensplan August 2026</div>
+  <table><thead><tr><th>Tag / Datum</th><th>Menü</th><th>Preis</th></tr></thead><tbody><tr><td><div class='weekday'>Mittwoch</div><div class='date'>05.08.2026</div></td><td class='menu'><span class='menu-name'>Kartoffelauflauf mit Fleischbällchen</span></td><td class='price'>7,00 €</td></tr>
+<tr><td><div class='weekday'>Donnerstag</div><div class='date'>06.08.2026</div></td><td class='menu'><span class='menu-name'>Putengeschnetzeltes mit Reis</span></td><td class='price'>7,00 €</td></tr>
+<tr><td><div class='weekday'>Mittwoch</div><div class='date'>12.08.2026</div></td><td class='menu'><span class='menu-name'>Gemüseeintopf mit Pelmeni</span></td><td class='price'>7,00 €</td></tr>
+<tr><td><div class='weekday'>Donnerstag</div><div class='date'>13.08.2026</div></td><td class='menu'><span class='menu-name'>Hawai Toast</span><span class='desc'>2 Toast belegt mit Schinken , Annanas , Käse</span></td><td class='price'>7,00 €</td></tr>
+<tr><td><div class='weekday'>Mittwoch</div><div class='date'>19.08.2026</div></td><td class='menu'><span class='menu-name'>Nudelpfanne mit Gemüse und Fleischbällchen</span></td><td class='price'>7,00 €</td></tr>
+<tr><td><div class='weekday'>Donnerstag</div><div class='date'>20.08.2026</div></td><td class='menu'><span class='menu-name'>Jägerschnitzel mit Pommes</span></td><td class='price'>14,00 €</td></tr>
+<tr><td><div class='weekday'>Mittwoch</div><div class='date'>26.08.2026</div></td><td class='menu'><span class='menu-name'>Gnocchi-Pfanne mit Tomatensoße</span></td><td class='price'>7,00 €</td></tr>
+<tr><td><div class='weekday'>Donnerstag</div><div class='date'>27.08.2026</div></td><td class='menu'><span class='menu-name'>Boulette mit Erbsen, Möhren und Kartoffeln</span></td><td class='price'>7,00 €</td></tr></tbody></table>
+  <section class='notice'><h2>Hinweis</h2><div>Bitte mindestens einen Tag vorher anmelden !</div></section>
+  <div class="print"><button onclick="window.print()">Essensplan speichern / drucken</button></div>
 </section>
-
 </div>
 </body>
 </html>
